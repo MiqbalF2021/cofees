@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import MenuPage from './pages/MenuPage';
 import Cart from './pages/Cart';
+import Pay from './pages/Pay';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/Menu" element={<MenuPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/pay" element={<Pay />} />
+        <Route path="/admin" element={<Dashboard />} />
       </Routes>
     </Router>
   );
