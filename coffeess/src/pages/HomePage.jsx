@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 function HomePage() {
   return (
-    <div className='bg-orange-50'>
+    <div className='bg-white'>
       <Nav/>
       <div className="container mx-auto font-cuy">
       {/* Section 1: Jumbotron with Image on the Right */}

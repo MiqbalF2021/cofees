@@ -2,10 +2,13 @@ import React from 'react';
 import cofee from '../img/cofee.png'
 import { Link } from 'react-router-dom';
 import { Button } from 'flowbite-react';
+import Navv from '../components/Navv';
 
 const LandingPage = () => {
   return (
-    <section className='flex mx-auto my-auto px-60 py-40 '>
+    <div>
+      <Navv />
+    <section className='flex mx-auto my-auto px-60 py-24 '>
       <div className='my-auto'>
         <div >
           <h2 className='text-neutral-950 text-3xl uppercase font-bold mb-3 font-cuy'>
@@ -28,6 +31,8 @@ const LandingPage = () => {
         </div>
       </div>
     </section>
+    </div>
+    
   );
 };
 

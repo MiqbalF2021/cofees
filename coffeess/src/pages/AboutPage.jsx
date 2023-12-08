@@ -8,7 +8,7 @@ const AboutPage = () => {
   return (
     <div>
         <Nav />
-        <div className="container mx-auto font-cuy"> 
+        <div className="container mx-auto font-cuy bg-white"> 
             {/* Section 1: Jumbotron with Image on the Right */}
       <div className="flex items-center justify-between px-20">
         <div className="w-1/2 pr-8">

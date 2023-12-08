@@ -8,6 +8,7 @@ const MenuPage = () => {
   return (
     <div>
         <Nav />
+        <div className='bg-white'>
         <div className='pl-10 font-medium text-xl font-cuy'>Silahkan pilih Menu Favorit anda!</div>
         <div class="font-cuy p-8 gap-6 items-center justify-center grid mb-8  rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-3 bg-white dark:bg-gray-800">
             <CardSatu />
@@ -20,6 +21,8 @@ const MenuPage = () => {
             <CardSatu />
             <CardSatu />
         </div>
+        </div>
+        
         <Footer />
     </div>
     

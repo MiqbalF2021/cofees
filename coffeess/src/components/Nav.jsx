@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import cart from '../img/cart.png'
 
 const Nav = () => {
     const location = useLocation();
@@ -64,9 +63,9 @@ const Nav = () => {
             <Link
                 to="/cart"
                 className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ${
-                  location.pathname === '/menu' ? 'text-green-500' : 'md:hover:text-green-400'
+                  location.pathname === '/cart' ? 'text-green-500' : 'md:hover:text-green-400'
                 } md:p-0 dark:text-white ${
-                  location.pathname === '/menu' ? 'md:dark:hover:text-green-800' : 'dark:hover:text-white'
+                  location.pathname === '/cart' ? 'md:dark:hover:text-green-800' : 'dark:hover:text-white'
                 } md:dark:hover:bg-transparent`}
               >
                 Cart
