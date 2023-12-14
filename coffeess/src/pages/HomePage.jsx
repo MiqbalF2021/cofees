@@ -1,13 +1,24 @@
 
-'use client';
-
 import Nav from "../components/Nav";
 import IcedCoffee from '../img/IcedCoffee.png'
 import Warung from '../img/Warung.jpeg'
 import Footer from '../components/Footer';
-import {Link} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import React,{ useEffect } from "react";
 
-function HomePage() {
+const HomePage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Pengecekan apakah pengguna sudah login
+    const isLoggedIn = localStorage.getItem('loggedIn');
+
+    // Jika belum login, arahkan ke halaman login
+    if (!isLoggedIn) {
+      navigate('/login');
+    }
+  }, []);
+
   return (
     <div className='bg-white'>
   <Nav />
