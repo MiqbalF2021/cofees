@@ -4,15 +4,6 @@
 
 CoffeeSS Web App adalah aplikasi pemesanan kopi online yang dirancang untuk memenuhi kebutuhan pengguna dalam memesan kopi favorit mereka. Aplikasi ini memberikan pengalaman pengguna yang nyaman dengan fungsionalitas CRUD yang memungkinkan pengguna untuk membuat akun, memesan kopi, dan memanajemen menu oleh admin.
 
-## Login
-- **Admin Login:**
-  - **Username:** admin@gmail.com
-  - **Password:** Admin@02
-
-- **User Login:**
-  - **Username:** coba@gmail.com
-  - **Password:** Coba@123
-
 ## Fungsionalitas CRUD
 
 ### Create
