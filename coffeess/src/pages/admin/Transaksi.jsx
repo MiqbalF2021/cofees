@@ -12,7 +12,7 @@ const TransaksiAdminPage = () => {
 
   const fetchTransaksi = () => {
     // Fetch transactions from the server
-    axios.get('http://localhost:3001/transaksi')
+    axios.get('https://backend-coffeess.vercel.app/transaksi')
       .then(response => setTransaksiList(response.data))
       .catch(error => console.error('Error fetching transaksi data:', error));
   };
@@ -20,7 +20,7 @@ const TransaksiAdminPage = () => {
   const handleKonfirmasi = async (transaksiId) => {
     try {
       // Kirim permintaan penghapusan pesanan
-      await axios.delete(`http://localhost:3001/transaksi/${transaksiId}`);
+      await axios.delete(`https://backend-coffeess.vercel.app/transaksi/${transaksiId}`);
       // Muat ulang daftar transaksi setelah penghapusan
       fetchTransaksi();
     } catch (error) {

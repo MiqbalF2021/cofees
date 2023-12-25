@@ -3,7 +3,6 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom'
 import React,{ useEffect } from "react";
-import Warung from '../img/Warung.jpeg'
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -23,7 +22,7 @@ const AboutPage = () => {
             <div className="flex flex-col-reverse md:flex-row items-center justify-between mt-8 px-4 md:px-20 lg:px-24 bg-orange-50 rounded-3xl shadow-md mb-20 p-4 md:p-10">
       <div className="w-full ">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Sejarah</h1>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2">Judul Sejarah</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2">Awal mula Coffeess</h2>
         <p className="text-gray-600 mb-4">
         Didirikan pada tahun 2023, Coffeess muncul sebagai pionir dalam dunia kopi spesial. Dengan semangat inovatif yang melimpah dan komitmen yang kuat untuk menyajikan pengalaman kopi yang tak terlupakan, startup ini segera menjadi sorotan di industri kopi global.
 

@@ -17,9 +17,10 @@ const AddProduct = () => {
       const handleSubmit = (e) => {
         e.preventDefault();
     
-        axios.post('http://localhost:3001/menu', menuData)
+        axios.post('https://backend-coffeess.vercel.app/menu', menuData)
           .then(response => {
             console.log(response.data);
+            alert('Add Product Berhasil');
             // Handle response jika diperlukan
           })
           .catch(error => {

@@ -40,7 +40,7 @@ const Pay = ({  cartItems }) => {
 
     try {
       // Mengirim data ke backend menggunakan HTTP POST request
-      const response = await axios.post('http://localhost:3001/pesanan', payload);
+      const response = await axios.post('https://backend-coffeess.vercel.app/pesanan', payload);
 
       // Menampilkan respons dari backend (response.data) di console
       console.log(response.data);
@@ -64,7 +64,7 @@ const Pay = ({  cartItems }) => {
   return (
     <div>
       <Nav />
-      <div className='font-cuy mb-40'>
+      <div className='font-cuy mb-40 mx-10'>
   <h1 className='text-3xl font-extrabold mt-2 text-center'>Pembayaran</h1>
   <div className=' gap-4 mx-auto mt-5 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl'>
     <div className="max-w-md mx-auto">
@@ -99,7 +99,7 @@ const Pay = ({  cartItems }) => {
     </div>
     <div className="max-w-md mx-auto">
       <div className="mb-2 block">
-        <Label htmlFor="alamat" value="alamat" className='font-bold'/>
+        <Label htmlFor="alamat" value="Alamat" className='font-bold'/>
       </div>
       <Textarea id="alamat"
             placeholder="Masukan Alamat lengkap disini"
@@ -117,7 +117,7 @@ const Pay = ({  cartItems }) => {
       </Select>
     </div>
     {cartItems.map((item) => (
-            <div key={item.id} className="flex items-center justify-between mt-4">
+            <div key={item.id} className="flex items-center justify-between mt-4 ">
               <div>
                 <h2 className="text-md sm:text-lg font-bold">{item.title}</h2>
                 <p>Jumlah: {quantities[item.id]}</p>
@@ -125,13 +125,13 @@ const Pay = ({  cartItems }) => {
               <p className="text-md sm:text-lg">Rp{item.price * quantities[item.id]}</p>
             </div>
           ))}
-          <div className='text-xl font-semibold mt-4'>
+          <div className='text-xl font-semibold mt-4 text-right '>
             Total Harga: Rp{totalPrice}
           </div>
   </div>
   <div className='fixed bottom-4 right-4 sm:bottom-8 sm:right-8 lg:bottom-10 lg:right-10 bg-orange-500 text-white px-4 sm:px-8 py-3 sm:py-5 rounded-2xl font-bold shadow-xl hover:bg-orange-600'>
     <Link to="#" onClick={handleBayar}>
-      Pesan
+      Pesan dan Bayar
     </Link>
   </div>
   

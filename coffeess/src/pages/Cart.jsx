@@ -40,7 +40,7 @@ const Cart = ({ cartItems }) => {
   return (
     <div>
       <Nav />
-      <div className='text-red-700 font-medium ml-20 font-cuy'>Produk di Cart akan terhapus ketika Logout!!</div>
+      <div className='text-red-700 font-medium ml-20 font-cuy'>Produk di Cart akan dihapus ketika Logout!!</div>
       <div className='bg-emerald-50 m-4 sm:m-8 lg:m-10 shadow-md p-4 sm:p-6 lg:p-10 rounded-3xl mb-16 sm:mb-32 lg:mb-72 font-cuy'>
         
         {cartItems.map(item => (

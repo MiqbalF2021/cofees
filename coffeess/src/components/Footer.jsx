@@ -1,23 +1,45 @@
 import React from 'react'
+import { Typography } from "@material-tailwind/react";
 
 const Footer = () => {
   return (
-    <footer className="grid justify-center bg-emerald-600 text-white py-4 font-medium text-xs sm:text-sm font-cuy">
-  <div className='flex flex-col gap-2 px-4 sm:px-8 lg:px-20 mb-2 sm:mb-3'>
-    <div>
-      <p>Hubungi Kami:</p>
-    </div>
-    <div>
-      <p>085162890411</p>
-    </div> 
-    <div>
-      <p>miqbalfauzi000@gmail.com</p>
-    </div>
-  </div> 
-  <div className='text-center text-green-400'>
-    &copy; 2023 Muhamad Iqbal Fauzi
-  </div>
-</footer>
+    <footer className="font-cuy flex w-full bg-emerald-600  flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center text-slate-50 md:justify-between">
+      <Typography color="blue-gray" className="font-medium mx-10">
+        &copy; 2023 Muhamad Iqbal Fauzi
+      </Typography>
+      <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 mx-10">
+        <li>
+          <Typography
+            as="a"
+            href="/about"
+            color="blue-gray"
+            className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+          >
+            About
+          </Typography>
+        </li>
+        <li>
+          <Typography
+            as="a"
+            href="#"
+            color="blue-gray"
+            className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+          >
+            Contribute
+          </Typography>
+        </li>
+        <li>
+          <Typography
+            as="a"
+            href="#"
+            color="blue-gray"
+            className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+          >
+            Contact
+          </Typography>
+        </li>
+      </ul>
+    </footer>
 
   )
 }

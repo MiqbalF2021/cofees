@@ -11,7 +11,7 @@ const MenuPage = ({ addToCart }) => {
 
   // Fetch menu data when the component mounts
   useEffect(() => {
-    axios.get('http://localhost:3001/menu')
+    axios.get('https://backend-coffeess.vercel.app/menu')
       .then(response => setMenuData(response.data))
       .catch(error => console.error('Error fetching menu data:', error));
   }, []);
@@ -39,8 +39,8 @@ const MenuPage = ({ addToCart }) => {
         <Nav />
         <div className='bg-white'>
         <div className='pl-10 font-medium text-xl font-cuy'>Silahkan pilih Menu Favorit anda!</div>
-        <div className="font-cuy p-8 gap-6 items-center justify-center grid mb-8  rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-3 bg-white dark:bg-gray-800 sm:grid-cols-2">
-        {menuData.slice(0, 9).map(menuItem => (
+        <div className="font-cuy p-8 gap-6 items-center justify-center grid grid-cols-2 mb-8  rounded-lg shadow-sm dark:border-gray-700 md:mb-12 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 md:grid-cols-3 bg-white dark:bg-gray-800 sm:grid-cols-2">
+        {menuData.slice(0, 50).map(menuItem => (
         <CardSatu 
           key={menuItem._id}
           id={menuItem._id}
@@ -48,8 +48,10 @@ const MenuPage = ({ addToCart }) => {
           price={menuItem.price}
           imageUrl={menuItem.imageUrl}
           addToCart={addToCart}
+          
         />
 ))}
+
         </div>
         </div>
         

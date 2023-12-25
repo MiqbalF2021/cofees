@@ -86,6 +86,31 @@ app.post('/menu', async (req, res) => {
   }
 });
 
+// Update Menu
+app.put('/menu/:id', async (req, res) => {
+  try {
+    const { title, price, imageUrl } = req.body;
+
+    // Validasi data (sesuaikan dengan kebutuhan Anda)
+    if (!title || isNaN(price) || price < 0) {
+      return res.status(400).json({ error: 'Invalid data provided' });
+    }
+
+    // Cari dan update menu berdasarkan ID
+    const updatedMenu = await MenuModel.findByIdAndUpdate(
+      req.params.id,
+      { title, price, imageUrl },
+      { new: true } // Return menu yang sudah diupdate
+    );
+
+    // Respon dengan menu yang sudah diupdate
+    res.json(updatedMenu);
+  } catch (error) {
+    console.error('Error updating menu:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 
 // Pesan Sesuatu
 app.post('/pesanan', async (req, res) => {
